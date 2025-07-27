@@ -1,12 +1,48 @@
 {
   "mcpServers": {
-    "filesystem": {
+  // https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem
+  "filesystem": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp/mcp-demo"]
     },
-    "memory": {
+  // https://www.npmjs.com/package/@modelcontextprotocol/server-memory
+  "memory": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-memory"]
+    },
+  // https://github.com/microsoft/azure-devops-mcp
+  "ado": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@azure-devops/mcp", "{you-ado-org-name}"]
+    },
+  // https://www.npmjs.com/package/@playwright/mcp
+  "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"],
+      "type": "stdio",
+      "env": {}
+    },
+  // https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking
+  "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+  // https://github.com/modelcontextprotocol/servers/tree/main/src/git
+  "git": {
+      "command": "uvx",
+      "args": ["mcp-server-git"]
+    },
+  // https://github.com/upstash/context7
+  "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+  // https://github.com/microsoftdocs/mcp
+  "microsoft.docs.mcp": {
+      "type": "http",
+      "url": "https://learn.microsoft.com/api/mcp"
     }
   }
 }

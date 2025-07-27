@@ -15,8 +15,14 @@ The MCP Servers Index repository provides:
 
 | Server Name | Description | VS Code mcp.json | Repository Link | Status |
 |-------------|-------------|------------------|-----------------|--------|
-| filesystem | File system access for local files | See below | [@modelcontextprotocol/server-filesystem](https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem) | Stable |
-| memory | In-memory context server for testing and demos | See below | [@modelcontextprotocol/server-memory](https://www.npmjs.com/package/@modelcontextprotocol/server-memory) | Stable |
+| filesystem | File system access for local files | `{ "command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp/mcp-demo"] }` | [@modelcontextprotocol/server-filesystem](https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem) | Stable |
+| memory | In-memory context server for testing and demos | `{ "command": "npx", "args": ["-y", "@modelcontextprotocol/server-memory"] }` | [@modelcontextprotocol/server-memory](https://www.npmjs.com/package/@modelcontextprotocol/server-memory) | Stable |
+| ado | Azure DevOps MCP server | `{ "type": "stdio", "command": "npx", "args": ["-y", "@azure-devops/mcp", "your-ado-org-name}"] }` | [microsoft/azure-devops-mcp](https://github.com/microsoft/azure-devops-mcp) | Beta |
+| playwright | Playwright MCP server | `{ "command": "npx", "args": ["-y", "@playwright/mcp@latest"], "type": "stdio", "env": {} }` | [playwright/mcp](https://www.npmjs.com/package/@playwright/mcp) | Beta |
+| sequential-thinking | Sequential Thinking MCP server | `{ "command": "npx", "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"] }` | [modelcontextprotocol/server-sequential-thinking](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) | Beta |
+| git | Git MCP server | `{ "command": "uvx", "args": ["mcp-server-git"] }` | [modelcontextprotocol/server-git](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | Beta |
+| context7 | Upstash Context7 MCP server | `{ "type": "stdio", "command": "npx", "args": ["-y", "@upstash/context7-mcp"] }` | [upstash/context7](https://github.com/upstash/context7) | Beta |
+| microsoft.docs.mcp | Microsoft Docs MCP server | `{ "type": "http", "url": "https://learn.microsoft.com/api/mcp" }` | [microsoftdocs/mcp](https://github.com/microsoftdocs/mcp) | Beta |
 
 ## Using MCP Servers with VS Code
 
@@ -36,24 +42,6 @@ To use MCP servers with VS Code, you'll need to create or modify your `mcp.json`
 2. Configure the MCP servers you want to use
 3. Restart VS Code to apply the configuration
 
-#### Example Configuration
-
-Here's a sample `mcp.json` configuration:
-
-```json
-{
-  "mcpServers": {
-    "filesystem": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp/mcp-demo"]
-    },
-    "memory": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory"]
-    }
-  }
-}
-```
 
 ### Configuration Options
 
