@@ -15,7 +15,8 @@ The MCP Servers Index repository provides:
 
 | Server Name | Description | VS Code mcp.json | Repository Link | Status |
 |-------------|-------------|------------------|-----------------|--------|
-| *Coming Soon* | *MCP servers will be listed here as they become available* | *Configuration examples* | *Links to repositories* | *Development status* |
+| filesystem | File system access for local files | See below | [@modelcontextprotocol/server-filesystem](https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem) | Stable |
+| memory | In-memory context server for testing and demos | See below | [@modelcontextprotocol/server-memory](https://www.npmjs.com/package/@modelcontextprotocol/server-memory) | Stable |
 
 ## Using MCP Servers with VS Code
 
@@ -42,23 +43,13 @@ Here's a sample `mcp.json` configuration:
 ```json
 {
   "mcpServers": {
-    "example-server": {
-      "command": "node",
-      "args": ["path/to/server.js"],
-      "env": {
-        "API_KEY": "your-api-key-here"
-      }
-    },
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/files"]
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp/mcp-demo"]
     },
-    "brave-search": {
+    "memory": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
-      "env": {
-        "BRAVE_API_KEY": "your-brave-api-key"
-      }
+      "args": ["-y", "@modelcontextprotocol/server-memory"]
     }
   }
 }
