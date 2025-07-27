@@ -1,46 +1,61 @@
 {
   "mcpServers": {
+  // https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp/mcp-demo"],
-      "env": {}
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp/mcp-demo"]
     },
+  // https://github.com/modelcontextprotocol/servers/tree/main/src/memory
     "memory": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-memory"]
     },
-    "brave-search": {
+    // https://github.com/microsoft/azure-devops-mcp
+    "ado": {
+      "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
-      "env": {
-        "BRAVE_API_KEY": "your-brave-api-key-here"
-      }
+      "args": ["-y", "@azure-devops/mcp", "{you-ado-org-name}"]
     },
-    "sqlite": {
+    // https://www.npmjs.com/package/@playwright/mcp
+    "playwright": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sqlite", "/path/to/database.db"]
+      "args": ["-y", "@playwright/mcp@latest"],
+      "type": "stdio",
+      "env": {}
     },
-    "github": {
+    // https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking
+    "sequential-thinking": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "your-github-token-here"
-      }
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
     },
-    "postgres": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-postgres"],
-      "env": {
-        "POSTGRES_CONNECTION_STRING": "postgresql://user:password@localhost:5432/dbname"
-      }
+    // https://github.com/modelcontextprotocol/servers/tree/main/src/git
+    "git": {
+      "command": "uvx",
+      "args": ["mcp-server-git"]
     },
-    "puppeteer": {
+    // https://github.com/upstash/context7
+    "context7": {
+      "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+      "args": ["-y", "@upstash/context7-mcp"]
     },
-    "fetch": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-fetch"]
+    // https://github.com/microsoftdocs/mcp
+    "microsoft.docs.mcp": {
+      "type": "http",
+      "url": "https://learn.microsoft.com/api/mcp"
+    },
+    // https://github.com/azure-ai-foundry/mcp-foundry
+    "azure-ai-foundry": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--prerelease=allow",
+        "--from",
+        "git+https://github.com/azure-ai-foundry/mcp-foundry.git",
+        "run-azure-ai-foundry-mcp",
+        "--envFile",
+        "${workspaceFolder}/.env"
+      ]
     }
   }
 }
