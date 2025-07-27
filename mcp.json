@@ -1,11 +1,11 @@
 {
   "mcpServers": {
-    // https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem
+  // https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem
     "filesystem": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp/mcp-demo"]
     },
-    // https://www.npmjs.com/package/@modelcontextprotocol/server-memory
+  // https://github.com/modelcontextprotocol/servers/tree/main/src/memory
     "memory": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-memory"]

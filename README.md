@@ -15,8 +15,8 @@ The MCP Servers Index repository provides:
 
 | Server Name | Description | VS Code mcp.json | Repository Link | Status |
 |-------------|-------------|------------------|-----------------|--------|
-| filesystem | File system access for local files | `{ "command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp/mcp-demo"] }` | [@modelcontextprotocol/server-filesystem](https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem) | Stable |
-| memory | In-memory context server for testing and demos | `{ "command": "npx", "args": ["-y", "@modelcontextprotocol/server-memory"] }` | [@modelcontextprotocol/server-memory](https://www.npmjs.com/package/@modelcontextprotocol/server-memory) | Stable |
+| filesystem | File system access for local files | `{ "command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp/mcp-demo"] }` | [modelcontextprotocol/server-filesystem](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | Stable |
+| memory | In-memory context server for testing and demos | `{ "command": "npx", "args": ["-y", "@modelcontextprotocol/server-memory"] }` | [modelcontextprotocol/server-memory](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) | Stable |
 | ado | Azure DevOps MCP server | `{ "type": "stdio", "command": "npx", "args": ["-y", "@azure-devops/mcp", "your-ado-org-name}"] }` | [microsoft/azure-devops-mcp](https://github.com/microsoft/azure-devops-mcp) | Beta |
 | playwright | Playwright MCP server | `{ "command": "npx", "args": ["-y", "@playwright/mcp@latest"], "type": "stdio", "env": {} }` | [playwright/mcp](https://www.npmjs.com/package/@playwright/mcp) | Beta |
 | sequential-thinking | Sequential Thinking MCP server | `{ "command": "npx", "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"] }` | [modelcontextprotocol/server-sequential-thinking](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) | Beta |
