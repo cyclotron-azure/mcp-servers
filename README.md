@@ -25,6 +25,10 @@ The MCP Servers Index repository provides:
 | microsoft.docs.mcp | Microsoft Docs MCP server | `{ "type": "http", "url": "https://learn.microsoft.com/api/mcp" }` | [microsoftdocs/mcp](https://github.com/microsoftdocs/mcp) | Beta |
 | azure-ai-foundry | MCP Server for Azure AI Foundry, providing unified tools for models, knowledge, and evaluation (experimental). | `{ "type": "stdio", "command": "uvx", "args": ["--prerelease=allow", "--from", "git+https://github.com/azure-ai-foundry/mcp-foundry.git", "run-azure-ai-foundry-mcp", "--envFile", "${workspaceFolder}/.env"] }` | [azure-ai-foundry/mcp-foundry](https://github.com/azure-ai-foundry/mcp-foundry) | Beta |
 
+## Additional Resources
+  
+[View example mcp.json configuration](./mcp.json)
+
 ## Using MCP Servers with VS Code
 
 ### Prerequisites
