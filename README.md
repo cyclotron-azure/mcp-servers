@@ -23,6 +23,7 @@ The MCP Servers Index repository provides:
 | git | Git MCP server | `{ "command": "uvx", "args": ["mcp-server-git"] }` | [modelcontextprotocol/server-git](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | Beta |
 | context7 | Upstash Context7 MCP server | `{ "type": "stdio", "command": "npx", "args": ["-y", "@upstash/context7-mcp"] }` | [upstash/context7](https://github.com/upstash/context7) | Beta |
 | microsoft.docs.mcp | Microsoft Docs MCP server | `{ "type": "http", "url": "https://learn.microsoft.com/api/mcp" }` | [microsoftdocs/mcp](https://github.com/microsoftdocs/mcp) | Beta |
+| azure-ai-foundry | MCP Server for Azure AI Foundry, providing unified tools for models, knowledge, and evaluation (experimental). | `{ "type": "stdio", "command": "uvx", "args": ["--prerelease=allow", "--from", "git+https://github.com/azure-ai-foundry/mcp-foundry.git", "run-azure-ai-foundry-mcp", "--envFile", "${workspaceFolder}/.env"] }` | [azure-ai-foundry/mcp-foundry](https://github.com/azure-ai-foundry/mcp-foundry) | Beta |
 
 ## Using MCP Servers with VS Code
 

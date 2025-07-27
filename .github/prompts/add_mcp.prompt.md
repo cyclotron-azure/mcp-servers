@@ -19,6 +19,7 @@ Given a GitHub repository URL for an MCP server, your task is to:
    - JSON configuration (as shown in the table)
    - Repository link
    - Status (default to "Beta" if not specified)
+4. Update `mcp.json` with the new server configuration.
 
 ## Guidance
 - Only use information that can be verified from the repository or its documentation.
