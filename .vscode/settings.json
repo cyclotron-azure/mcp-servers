@@ -1,0 +1,69 @@
+{
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.trimAutoWhitespace": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "json.format.enable": true,
+  "json.format.keepLines": false,
+  "json.validate.enable": true,
+  "json.maxItemsComputed": 5000,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true,
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "markdown.preview.breaks": true,
+  "markdown.preview.linkify": true,
+  "files.associations": {
+    "mcp.json": "json",
+    "mcp.json.local": "json",
+    "mcp-config.json": "json",
+    "mcp-config.local.json": "json",
+    "**/mcp*.json": "json"
+  },
+  "explorer.confirmDelete": true,
+  "explorer.confirmDragAndDrop": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.env*": true,
+    "**/mcp.json.local": true,
+    "**/mcp-config.local.json": true,
+    "**/mcp-secrets.json": true
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/mcp.json.local": true,
+    "**/mcp-secrets.json": true
+  },
+  "extensions.recommendations": [
+    "yzhang.markdown-all-in-one",
+    "redhat.vscode-yaml",
+    "ms-vscode.vscode-json"
+  ]
+}
