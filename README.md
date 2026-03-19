@@ -1,5 +1,7 @@
 # MCP Servers Index
 
+[![Security Scan](https://img.shields.io/endpoint?url=https://mcpampel.com/badge/cyclotron-azure/mcp-servers.json)](https://mcpampel.com/repo/cyclotron-azure/mcp-servers)
+
 This repository serves as an index and collection of Model Context Protocol (MCP) servers for the Cyclotron Azure organization. MCP is an open protocol that enables secure connections between host applications (like Claude Desktop, VS Code, or other AI tools) and data sources.
 
 ## Purpose
